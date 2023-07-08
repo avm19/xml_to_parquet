@@ -5,7 +5,7 @@ Author: David Lee
 """
 import argparse
 
-from xml_to_parquet_pkg.convert_xml_to_parquet import convert_xml_to_parquet
+from xml2pq.convert_xml_to_parquet import convert_xml_to_parquet
 
 if __name__ == "__main__":
 
