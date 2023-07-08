@@ -1,4 +1,8 @@
 """
+Parts of this file have been modified. See the original notice below.
+Forked from https://github.com/blackrock/xml_to_parquet
+
+------------------------------
 (c) 2021 BlackRock. All rights reserved.
 
 Author: David Lee

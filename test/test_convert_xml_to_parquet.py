@@ -1,3 +1,7 @@
+"""
+Parts of this file have been modified.
+Forked from https://github.com/blackrock/xml_to_parquet
+"""
 import unittest
 import os
 import tempfile
