@@ -28,7 +28,12 @@ from xmlschema.exceptions import XMLSchemaValueError
 
 _logger = logging.getLogger(__name__)
 _logger.setLevel(logging.DEBUG)
-
+formatter = logging.Formatter(
+    "%(levelname)s - %(asctime)s - %(message)s", datefmt="%Y-%m-%d %H:%M:%S"
+)
+ch = logging.StreamHandler()
+ch.setFormatter(formatter)
+_logger.addHandler(ch)
 
 def json_decoder(obj):
     """
@@ -435,16 +440,9 @@ def convert_xml_to_parquet(
 
     """
 
-    formatter = logging.Formatter(
-        "%(levelname)s - %(asctime)s - %(message)s", datefmt="%Y-%m-%d %H:%M:%S"
-    )
-
-    ch = logging.StreamHandler()
-    ch.setFormatter(formatter)
     ch.setLevel(logging.getLevelName(verbose))
-    _logger.addHandler(ch)
 
-    if log:
+    if log:  # TODO: remove handler to avoid multiples under repeated calls
         # create log file handler and set level to debug
         fh = logging.FileHandler(log)
         fh.setFormatter(formatter)
