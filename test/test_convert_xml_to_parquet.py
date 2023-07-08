@@ -2,7 +2,7 @@ import unittest
 import os
 import tempfile
 
-from xml_to_parquet.convert_xml_to_parquet import parse_file
+from xml2pq.convert_xml_to_parquet import parse_file
 
 
 class MyTest(unittest.TestCase):

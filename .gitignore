@@ -1,2 +1,4 @@
 __pycache__/
 *.py[cod]
+xml_to_parquet.egg-info/
+test/*.parquet
