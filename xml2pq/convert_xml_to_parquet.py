@@ -77,7 +77,7 @@ class NestedParqConverter(xmlschema.XMLSchemaConverter):
         """
         return False
 
-    def element_decode(self, data, xsd_element, level=0):
+    def element_decode(self, data, xsd_element, xsd_type=None, level=0):
         """
         :param data: Decoded ElementData from an Element node.
         :param xsd_element: The `XsdElement` associated to decoded the data.
