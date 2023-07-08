@@ -20,10 +20,7 @@ import pyarrow.parquet as arrow_parquet
 import pyarrow.json as arrow_json
 from datetime import datetime
 
-# import time
-
 from xmlschema.exceptions import XMLSchemaValueError
-from xmlschema.compat import ordered_dict_class
 
 _logger = logging.getLogger(__name__)
 _logger.setLevel(logging.DEBUG)
@@ -57,7 +54,7 @@ class NestedParqConverter(xmlschema.XMLSchemaConverter):
         """
         kwargs.update(attr_prefix="", text_key=None, cdata_prefix=None)
         super(NestedParqConverter, self).__init__(
-            namespaces, dict_class or ordered_dict_class, list_class, **kwargs
+            namespaces, dict_class, list_class, **kwargs
         )
 
     def __setattr__(self, name, value):
