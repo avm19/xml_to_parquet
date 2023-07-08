@@ -6,17 +6,14 @@ Author: David Lee
 import io
 import xml.etree.cElementTree as ET
 import xmlschema
-from collections import OrderedDict
 import decimal
 import json
 import glob
 from multiprocessing import Pool
-import subprocess
 import os
 import gzip
 import tarfile
 import logging
-import shutil
 import sys
 from zipfile import ZipFile
 import pyarrow.parquet as arrow_parquet
