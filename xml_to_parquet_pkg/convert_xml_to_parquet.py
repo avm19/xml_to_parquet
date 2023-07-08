@@ -106,7 +106,7 @@ class NestedParqConverter(xmlschema.XMLSchemaConverter):
                     if xsd_child.local_name:
                         name = xsd_child.local_name
                     else:
-                        name = name[2 + len(xsd_child.namespace) :]
+                        name = name[2 + len(xsd_child.namespace):]
 
                     if xsd_child.is_single():
                         if hasattr(xsd_child, "type") and (
@@ -180,7 +180,6 @@ def parse_xml(
     xparents = dict()
     excludeparents = dict()
     currentxpath = []
-    json_data = ""
 
     if not xpaths_set:
         elem_active = True
