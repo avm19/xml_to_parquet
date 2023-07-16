@@ -1,3 +1,8 @@
+_Parts of this file and package have been modified. 
+Forked from https://github.com/blackrock/xml_to_parquet_ 
+
+_I modified this repo to make it work with updated dependencies and "pip install ...": see branch [fix_stuff](https://github.com/avm19/xml_to_parquet/tree/fix_stuff). I stopped using this package because it seemingly reads the entire XML into memory and thus is not suitable for parsing large XML files. See here: https://github.com/avm19/xml_to_parquet/blob/3a1f6a56cf54e84f1fc195d33b9f83003575e441/xml_to_parquet_pkg/convert_xml_to_parquet.py#L227C1-L230_
+
 # **XML To Parquet Converter**
 
 This repository contains code for the XML to Parquet Converter.
